@@ -1,5 +1,6 @@
+"use client"
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "next/navigation";
 import EventData from "./EventData";
 import AOS from "aos";
 import "aos/dist/aos.css";

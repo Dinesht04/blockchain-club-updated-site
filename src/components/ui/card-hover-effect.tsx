@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
-import Lottie from 'react-lottie';
-import { cn } from '../../utils/cn.ts';
+import Lottie from 'lottie-react'
+import { cn } from '@/utils/cn'
 
 export const HoverEffect = ({
   items,
@@ -23,7 +23,7 @@ export const HoverEffect = ({
     <div className={cn('flex flex-col sm:flex-row sm:w-3/4 sm:h-3/4 h-full w-full', className)}>
       {items.map(({ title, description, link, animationData }, idx) => (
         <Link
-          to={link}
+          href="#"
           key={link}
           className="relative group block p-2 h-full w-full sm:w-1/2"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -142,6 +142,8 @@ export const CardDescription = ({
     </p>
   );
 };
+
+
 
 export const CardImageAnimation = ({ animationData }) => {
   const animationOptions = {

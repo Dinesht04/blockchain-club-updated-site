@@ -1,4 +1,5 @@
-import { cn } from "../../utils/cn.ts";
+"use client"
+import { cn } from "@/utils/cn";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({

@@ -1,6 +1,7 @@
+"use client"
 import { useEffect, useState } from "react";
 import { BackgroundBoxesDemo } from "../BackgroundBoxes";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 import EventData from "./EventData";
 
 function Event() {
@@ -26,7 +27,7 @@ function Event() {
       {recentEvent && (
         <div className="relative w-full max-w-5xl mt-12" key={recentEvent.id}>
           {" "}
-          <NavLink to={`/events/${recentEvent.name}`}>
+          <Link to={`/events/${recentEvent.name}`}>
             {" "}
             <img
               src={recentEvent.images[0]}
@@ -37,7 +38,7 @@ function Event() {
               <p>{recentEvent.name}</p>
               <p>{recentEvent.date}</p>
             </div>
-          </NavLink>
+          </Link>
         </div>
       )}
 
@@ -47,7 +48,7 @@ function Event() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 px-5">
           {pastEvents.map((event, index) => (
-            <NavLink to={`/events/${event.name}`} key={event.id}>
+            <Link to={`/events/${event.name}`} key={event.id}>
               <div className="relative border-4 border-black cursor-pointer ">
                 <div className="border-4 border-orange-500 w-70 h-64">
                   <img
@@ -63,7 +64,7 @@ function Event() {
                   </span>
                 </div>
               </div>
-            </NavLink>
+            </Link>
           ))}
         </div>
       </div>

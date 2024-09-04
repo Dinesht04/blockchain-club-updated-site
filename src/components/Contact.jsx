@@ -1,7 +1,7 @@
 import { BackgroundBoxesDemo } from "./BackgroundBoxes";
 import { SignupFormDemo } from "./Form";
 import ContactAnimationJson from "../assets/Lottie/ContactAnimationData.json";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 
 function Contact() {
   const ContactAnimationOptions = {
@@ -25,12 +25,12 @@ function Contact() {
             <div className="grid items-center justify-items-center gap-4 md:gap-8 lg:gap-x-4 lg:gap-y-10 lg:grid-cols-2 overflow-x-hidden">
               {/* contact from */}
               <SignupFormDemo />
-              <Lottie
+              {/* <Lottie
                 options={ContactAnimationOptions}
                 className="hidden md:block"
                 height={400}
                 width={400}
-              />
+              /> */}
             </div>
           </div>
         </div>

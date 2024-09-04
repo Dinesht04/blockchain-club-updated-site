@@ -11,7 +11,7 @@ import {
   Bitमंथन10,
   Bitमंथन11,
   Bitमंथन12,
-} from "../../assets/EventAssets/Bitमंथन";
+} from "@/assets/EventAssets/Bitमंथन";
 
 import {
   Ideathon1,
@@ -26,7 +26,7 @@ import {
   Ideathon10,
   Ideathon11,
   Ideathon12,
-} from "../../assets/EventAssets/Ideathon24";
+} from "@/assets/EventAssets/Ideathon24";
 
 import {
   CryptoCarnival1,
@@ -41,7 +41,7 @@ import {
   CryptoCarnival10,
   CryptoCarnival11,
   CryptoCarnival12,
-} from "../../assets/EventAssets/CryptoCarnival";
+} from "@/assets/EventAssets/CryptoCarnival";
 
 const EventData = () => [
   {

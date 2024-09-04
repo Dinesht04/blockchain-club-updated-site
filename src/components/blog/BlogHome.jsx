@@ -1,6 +1,7 @@
+"use client"
 import { useEffect, useState } from "react";
 import { BackgroundBoxesDemo } from "../BackgroundBoxes";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 import blogData from "./data/blogData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -45,7 +46,7 @@ function BlogHome() {
           {latestBlog.map((blog) => (
             <div className="m-3 p-3" key={blog.id}>
               <SwiperSlide className="bg-orange-400" key={blog.id}>
-                <NavLink to={`/blog/${blog.id}`}>
+                <Link to={`/blog/${blog.id}`}>
                   <div
                     className="flex flex-col"
                     style={{
@@ -71,7 +72,7 @@ function BlogHome() {
                       </div>
                     </div>
                   </div>
-                </NavLink>
+                </Link>
               </SwiperSlide>
             </div>
           ))}
@@ -107,11 +108,11 @@ function BlogHome() {
                   </div>
                 </div>
               </div>
-              <NavLink to={`/blog/${blog.id}`}>
+              <Link to={`/blog/${blog.id}`}>
                 <span className="text-white hover:text-orange-500 mx-2">
                   Read More...
                 </span>
-              </NavLink>
+              </Link>
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
 import Logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link } from "next/link";
 import { FaLinkedin, FaInstagram } from "react-icons/fa6";
 
 function Footer() {
@@ -28,7 +28,7 @@ function Footer() {
                 <li className="mb-4">
                   <Link
                     className=" text-base font-medium text-gray-100 hover:text-orange-500"
-                    to={"/about"}
+                    href={"/about"}
                   >
                     About Us
                   </Link>
@@ -36,7 +36,7 @@ function Footer() {
                 <li className="mb-4">
                   <Link
                     className=" text-base font-medium text-gray-100 hover:text-orange-500"
-                    to={"/contact"}
+                    href={"/contact"}
                   >
                     Contact Us
                   </Link>

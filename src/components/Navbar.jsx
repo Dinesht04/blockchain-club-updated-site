@@ -1,6 +1,7 @@
+"use client"
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 import Logo from "../assets/logo.png";
 import vitLogo from "../assets/vitLogo.png";
 const menuItems = [
@@ -66,8 +67,8 @@ function Navbar() {
           <ul className="inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <NavLink
-                  to={item.to}
+                <Link
+                  href={item.to}
                   className={({ isActive }) =>
                     `text-sm font-semibold hover:text-orange-500 ${
                       isActive ? "text-orange-500" : "text-gray-100"
@@ -75,7 +76,7 @@ function Navbar() {
                   }
                 >
                   {item.name}
-                </NavLink>
+                </Link>
               </li>
             ))}
           </ul>
@@ -110,9 +111,9 @@ function Navbar() {
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
                     {menuItems.map((item) => (
-                      <NavLink
+                      <Link
                         key={item.name}
-                        to={item.to}
+                        href={item.to}
                         className={({ isActive }) =>
                           `-m-3 flex items-center rounded-md p-3 text-sm font-semibold ${
                             isActive ? "text-orange-500" : "text-gray-100"
@@ -122,7 +123,7 @@ function Navbar() {
                         <span className="ml-3 text-base font-medium">
                           {item.name}
                         </span>
-                      </NavLink>
+                      </Link>
                     ))}
                   </nav>
                 </div>

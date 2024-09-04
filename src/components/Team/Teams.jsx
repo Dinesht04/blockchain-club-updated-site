@@ -1,5 +1,7 @@
+"use client"
 import { useEffect, useState } from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams } from "next/navigation";
+import Link from "next/link";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import TeamData from "./TeamData";
 import { TiltCard } from "./TiltCard";
@@ -50,7 +52,7 @@ function Teams() {
         </div>
         <div>
           {currentTeam && (
-            <NavLink to={`/about/${currentTeam.name}`}>
+            <Link to={`/about/${currentTeam.name}`}>
               <TiltCard
                 teamName={currentTeam.name}
                 key={currentTeam.id}
@@ -58,7 +60,7 @@ function Teams() {
               >
                 <h2 className="text-white text-4xl">{currentTeam.name}</h2>
               </TiltCard>
-            </NavLink>
+            </Link>
           )}
         </div>
         <div className="flex items-center">
